@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 LABEL maintainer="srilekhareddybandi@gmail.com"
 VOLUME /main-app
-ADD target/*.jar app.jar
+ADD target/*.war app.war
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar","/app.jar"]
+ENTRYPOINT ["java", "-war","/app.war"]
